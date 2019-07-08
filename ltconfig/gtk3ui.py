@@ -81,16 +81,16 @@ class Gtk3UI(Gtk3PluginBase):
 
     log.debug("Enabling GtkUI...")
 
-    self._ui = Gtk.glade.XML(get_resource("wnd_preferences.ui"))
+    self.builder = Gtk.Builder.new_from_file(get_resource("wnd_preferences.ui"))
 
-    self._blk_prefs = self._ui.get_widget("blk_preferences")
-    self._lbl_ver = self._ui.get_widget("lbl_version")
-    self._chk_apply_on_start = self._ui.get_widget("chk_apply_on_start")
-    self._blk_view = self._ui.get_widget("blk_view")
+    self._blk_prefs = self.builder._ui.get_object("blk_preferences")
+    self._lbl_ver = self.builder._ui.get_object("lbl_version")
+    self._chk_apply_on_start = self.builder._ui.get_object("chk_apply_on_start")
+    self._blk_view = self.builder._ui.get_object("blk_view")
 
-    self._presets = self._ui.get_widget("presets")
+    self._presets = self.builder._ui.get_object("presets")
     self._presets.set_active(0)
-    self._load_preset = self._ui.get_widget("load_preset")
+    self._load_preset = self.builder._ui.get_object("load_preset")
     self._load_preset.connect("clicked", self._do_load_preset)
 
     self._view = self._build_view()
