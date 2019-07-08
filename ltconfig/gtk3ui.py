@@ -81,8 +81,8 @@ class Gtk3UI(Gtk3PluginBase):
   def enable(self):
 
     log.debug("Enabling GtkUI...")
-
-    self.builder = self.Builder.new_from_file(get_resource("wnd_preferences.ui"))
+    self.builder = gtk.Builder()
+    self.builder = self.Builder.add_from_file(get_resource("wnd_preferences.ui"))
 
     self._blk_prefs = self.builder._ui.get_object("blk_preferences")
     self._lbl_ver = self.builder._ui.get_object("lbl_version")
