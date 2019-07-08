@@ -33,6 +33,7 @@
 # do so, delete this exception statement from your version.
 #
 
+from __future__ import unicode_literals
 
 import logging
 

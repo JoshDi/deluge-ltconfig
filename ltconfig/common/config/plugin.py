@@ -33,6 +33,7 @@
 # do so, delete this exception statement from your version.
 #
 
+from __future__ import unicode_literals
 
 CONFIG_DEFAULTS_V1 = {
   "apply_on_start": False,

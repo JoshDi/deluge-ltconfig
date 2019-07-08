@@ -37,6 +37,7 @@
 #    statement from all source files in the program, then also delete it here.
 #
 
+from __future__ import unicode_literals
 
 from deluge.plugins.init import PluginInitBase
 
