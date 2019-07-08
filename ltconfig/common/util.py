@@ -109,7 +109,7 @@ def copy_dict_value(src, dest, src_key, dest_key, use_deepcopy=False):
 def update_dict(dest, src, use_deepcopy=False):
   # Cumulative dict update
 
-  for key in src.keys():
+  for key in list(src.keys()):
     if key not in dest or not isinstance(src[key], dict):
       copy_dict_value(src, dest, key, key, use_deepcopy)
       continue
@@ -120,7 +120,7 @@ def update_dict(dest, src, use_deepcopy=False):
 
 def normalize_dict(dict_in, template):
 
-  for key in dict_in.keys():
+  for key in list(dict_in.keys()):
     if key not in template:
       del dict_in[key]
 
