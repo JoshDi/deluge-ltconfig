@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <object class="GtkListStore" id="model1">
     <columns>
@@ -19,9 +19,9 @@
       </row>
     </data>
   </object>
-  <!-- interface-requires gtk+ 2.16 -->
-  <!-- interface-naming-policy toplevel-contextual -->
-  <object class="GtkWindow" id="wnd_preferences">
+   <requires lib="gtk+" version="2.24"/>
+   <!-- interface-naming-policy toplevel-contextual -->
+   <object class="GtkWindow" id="wnd_preferences">
     <child>
       <object class="GtkAlignment" id="blk_preferences">
         <property name="visible">True</property>
