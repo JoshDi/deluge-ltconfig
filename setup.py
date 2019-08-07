@@ -70,7 +70,7 @@ setup(
     [deluge.plugin.gtkui]
     %s = %s:GtkUIPlugin
     [deluge.plugin.gtk3ui]
-    %s = deluge_%s:Gtk3UIPlugin
+    %s = %s:Gtk3UIPlugin
     [deluge.plugin.web]
     %s = %s:WebUIPlugin
     """ % ((__plugin_name__, __plugin_name__.lower())*4)
